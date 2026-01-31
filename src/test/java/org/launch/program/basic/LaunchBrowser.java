@@ -15,7 +15,7 @@ public class LaunchBrowser {
 
 
         Playwright playwright = Playwright.create();
-        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setChannel("msedge"));
         BrowserContext browserContext =browser.newContext(new Browser.NewContextOptions().setViewportSize((int)width,(int)height));
 
         Page page = browserContext.newPage();
